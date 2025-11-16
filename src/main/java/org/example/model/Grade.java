@@ -1,35 +1,40 @@
 package org.example.model;
 
 public class Grade {
-    private String studentId;
-    private String studentName;
-    private String courseID;
-    private double gradeAssessment1;
-    private double gradeAssessment2;
-    private double gradeFinal;
-    private double gradeAverage;
-    private String gradeNote;
 
-    // Constructor
-    public Grade(String studentId, String studentName, String courseID, double gradeAssessment1,
-                 double gradeAssessment2, double gradeFinal, double gradeAverage, String gradeNote) {
-        this.studentId = studentId;
-        this.studentName = studentName;
-        this.courseID = courseID;
-        this.gradeAssessment1 = gradeAssessment1;
-        this.gradeAssessment2 = gradeAssessment2;
-        this.gradeFinal = gradeFinal;
-        this.gradeAverage = gradeAverage;
-        this.gradeNote = gradeNote;
-    }
+    private String StudentID;
+    private String CourseID;
+    private Double GradeAssessment1;
+    private Double GradeAssessment2;
+    private Double GradeFinal;
+    private Double GradeAverage;
+    private String GradeNote;
 
-    // Getters
-    public String getStudentId() { return studentId; }
-    public String getStudentName() { return studentName; }
-    public String getCourseID() { return courseID; }
-    public double getGradeAssessment1() { return gradeAssessment1; }
-    public double getGradeAssessment2() { return gradeAssessment2; }
-    public double getGradeFinal() { return gradeFinal; }
-    public double getGradeAverage() { return gradeAverage; }
-    public String getGradeNote() { return gradeNote; }
+    /**
+     * Hàm khởi tạo rỗng
+     */
+    public Grade() { }
+
+    // ----- Getters and Setters (BẮT BUỘC CÓ) -----
+
+    public String getStudentID() { return StudentID; }
+    public void setStudentID(String studentID) { this.StudentID = studentID; }
+
+    public String getCourseID() { return CourseID; }
+    public void setCourseID(String courseID) { this.CourseID = courseID; }
+
+    public Double getGradeAssessment1() { return GradeAssessment1; }
+    public void setGradeAssessment1(Double gradeAssessment1) { this.GradeAssessment1 = gradeAssessment1; }
+
+    public Double getGradeAssessment2() { return GradeAssessment2; }
+    public void setGradeAssessment2(Double gradeAssessment2) { this.GradeAssessment2 = gradeAssessment2; }
+
+    public Double getGradeFinal() { return GradeFinal; }
+    public void setGradeFinal(Double gradeFinal) { this.GradeFinal = gradeFinal; }
+
+    public Double getGradeAverage() { return GradeAverage; }
+    public void setGradeAverage(Double gradeAverage) { this.GradeAverage = gradeAverage; }
+
+    public String getGradeNote() { return GradeNote; }
+    public void setGradeNote(String gradeNote) { this.GradeNote = gradeNote; }
 }

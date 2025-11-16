@@ -15,7 +15,7 @@ public class DBConnection {
     private static final String USERNAME = "root";
 
     // Mật khẩu của MySQL của bạn
-    private static final String PASSWORD = "your pass word"; //
+    private static final String PASSWORD = "Luctam@1504"; //
 
     // --- (Các thông số khác thường giữ nguyên) ---
     private static final String HOST = "localhost"; // 127.0.0.1

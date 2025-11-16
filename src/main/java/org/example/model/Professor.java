@@ -1,28 +1,44 @@
 package org.example.model;
 
 public class Professor {
-    private String professorID;
-    private String professorName;
-    private String email;
-    private String phone;
-    private String title;
-    private String hometown;
 
-    // Constructor
-    public Professor(String professorID, String professorName, String email, String phone, String title, String hometown) {
-        this.professorID = professorID;
-        this.professorName = professorName;
-        this.email = email;
-        this.phone = phone;
-        this.title = title;
-        this.hometown = hometown;
+    private String ProfessorID;
+    private String ProfessorName;
+    private String ProfessorEmail;
+    private String ProfessorPhone;
+    private String Professorhometown;
+    private String ProfessorTitle;
+
+    /**
+     * Hàm khởi tạo rỗng (Default Constructor).
+     */
+    public Professor() { }
+
+    public Professor(String professorID, String professorName, String email,
+                     String phone, String title, String hometown) {
+        this.ProfessorID = professorID;
+        this.ProfessorName = professorName;
+        this.ProfessorEmail = email;
+        this.ProfessorPhone = phone;
+        this.ProfessorTitle = title;
+        this.Professorhometown = hometown;
     }
 
-    // Getters
-    public String getProfessorID() { return professorID; }
-    public String getProfessorName() { return professorName; }
-    public String getEmail() { return email; }
-    public String getPhone() { return phone; }
-    public String getTitle() { return title; }
-    public String getHometown() { return hometown; }
+    // 4. CÁC HÀM GETTER (Lấy dữ liệu ra)
+    public String getProfessorID() { return ProfessorID; }
+    public String getProfessorName() { return ProfessorName; }
+    public String getProfessorEmail() { return ProfessorEmail; }
+    public String getProfessorPhone() { return ProfessorPhone; }
+    public String getProfessorhometown() { return Professorhometown; }
+    public String getProfessorTitle() { return ProfessorTitle; }
+
+    /**
+     * Các hàm Setters (Gán dữ liệu vào).
+     */
+    public void setProfessorID(String professorID) { this.ProfessorID = professorID; }
+    public void setProfessorName(String professorName) { this.ProfessorName = professorName; }
+    public void setProfessorEmail(String professorEmail) { this.ProfessorEmail = professorEmail; }
+    public void setProfessorPhone(String professorPhone) { this.ProfessorPhone = professorPhone; }
+    public void setProfessorhometown(String professorhometown) { this.Professorhometown = professorhometown; }
+    public void setProfessorTitle(String professorTitle) { this.ProfessorTitle = professorTitle; }
 }

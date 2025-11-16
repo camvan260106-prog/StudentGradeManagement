@@ -1,62 +1,60 @@
 package org.example.model;
 
-import java.util.Date; // Sử dụng java.util.Date
+import java.util.Date;
 
 public class Student {
 
+    // Khai báo 11 biến
     private String studentId;
-    private String studentName;
-    private Date studentDOB;
-    private String studentGender;
-    private String studentMajor;
-    private String studentEmail;
-    private String studentPhone;
-    private String studentHometown;
-    private String parentName;
-    private String parentPhone;
-    private String studentStatus;
+    private String StudentName;
+    private Date StudentDOB;
+    private String StudentGender;
+    private String StudentMajor;
+    private String StudentEmail;
+    private String StudentPhone;
+    private String StudentHometown;
+    private String ParentName;
+    private String ParentPhone;
+    private String StudentStatus;
 
-    // Constructor ()
-    public Student(String studentId, String studentName, Date studentDOB, String studentGender,
-                   String studentMajor, String studentEmail, String studentPhone, String studentHometown,
-                   String parentName, String parentPhone, String studentStatus) {
-        this.studentId = studentId;
-        this.studentName = studentName;
-        this.studentDOB = studentDOB;
-        this.studentGender = studentGender;
-        this.studentMajor = studentMajor;
-        this.studentEmail = studentEmail;
-        this.studentPhone = studentPhone;
-        this.studentHometown = studentHometown;
-        this.parentName = parentName;
-        this.parentPhone = parentPhone;
-        this.studentStatus = studentStatus;
-    }
+    /**
+     * Hàm khởi tạo rỗng (Default Constructor)
+     * BẮT BUỘC CÓ để DAO hoạt động.
+     */
+    public Student() { }
 
-    // Getters ()
-    public String getStudentId() {
-        return studentId;
-    }
-    public String getStudentName() { // Đổi từ getFullName -> getStudentName
-        return studentName;
-    }
-    public Date getStudentDOB() {
-        return studentDOB;
-    }
-    public String getStudentGender() {
-        return studentGender;
-    }
-    public String getStudentMajor() {
-        return studentMajor;
-    }
-    public String getStudentEmail() {
-        return studentEmail;
-    }
-    public String getStudentPhone() { return studentPhone; }
-    public String getStudentHometown() { return studentHometown; }
-    public String getParentName() { return  parentName; }
-    public String getParentPhone() {return parentPhone; }
-    public String getStudentStatus() {
-        return studentStatus;
-    }
+    // ----- Getters and Setters -----
+
+    public String getStudentId() { return studentId; }
+    public void setStudentId(String studentId) { this.studentId = studentId; }
+
+    public String getStudentName() { return StudentName; }
+    public void setStudentName(String studentName) { this.StudentName = studentName; }
+
+    public Date getStudentDOB() { return StudentDOB; }
+    public void setStudentDOB(Date studentDOB) { this.StudentDOB = studentDOB; }
+
+    public String getStudentGender() { return StudentGender; }
+    public void setStudentGender(String studentGender) { this.StudentGender = studentGender; }
+
+    public String getStudentMajor() { return StudentMajor; }
+    public void setStudentMajor(String studentMajor) { this.StudentMajor = studentMajor; }
+
+    public String getStudentEmail() { return StudentEmail; }
+    public void setStudentEmail(String studentEmail) { this.StudentEmail = studentEmail; }
+
+    public String getStudentPhone() { return StudentPhone; }
+    public void setStudentPhone(String studentPhone) { this.StudentPhone = studentPhone; }
+
+    public String getStudentHometown() { return StudentHometown; }
+    public void setStudentHometown(String studentHometown) { this.StudentHometown = studentHometown; }
+
+    public String getParentName() { return ParentName; }
+    public void setParentName(String parentName) { this.ParentName = parentName; }
+
+    public String getParentPhone() { return ParentPhone; }
+    public void setParentPhone(String parentPhone) { this.ParentPhone = parentPhone; }
+
+    public String getStudentStatus() { return StudentStatus; }
+    public void setStudentStatus(String studentStatus) { this.StudentStatus = studentStatus; }
 }
