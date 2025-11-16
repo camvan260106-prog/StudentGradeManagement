@@ -1,34 +1,31 @@
 package org.example.model;
 
+import java.util.Date;
+
 public class Account {
+
+    // Khai báo biến
     private String username;
-    private String password;
-    private String roleName; // Tên cột trong CSDL của bạn là 'RoleName'
+    private String Password; // 'P' viết hoa khớp CSDL
+    private String RoleName;
+    private Date CreatedDate;
 
-    // Constructor
-    public Account(String username, String password, String roleName) {
-        this.username = username;
-        this.password = password;
-        this.roleName = roleName;
-    }
+    /**
+     * Hàm khởi tạo rỗng (BẮT BUỘC CÓ)
+     */
+    public Account() { }
 
-    // Getters và Setters
-    public String getUsername() {
-        return username;
-    }
-    public void setUsername(String username) {
-        this.username = username;
-    }
-    public String getPassword() {
-        return password;
-    }
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public String getRoleName() {
-        return roleName;
-    }
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
+    // ----- Getters and Setters -----
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPassword() { return Password; }
+    public void setPassword(String password) { this.Password = password; }
+
+    public String getRole() { return RoleName; } // Dùng getRole() cho dễ hiểu
+    public void setRole(String roleName) { this.RoleName = roleName; }
+
+    public Date getCreatedDate() { return CreatedDate; }
+    public void setCreatedDate(Date createdDate) { this.CreatedDate = createdDate; }
 }

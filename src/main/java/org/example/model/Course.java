@@ -1,41 +1,33 @@
 package org.example.model;
 
 public class Course {
-    private String courseID;
-    private String courseName;
+    private String CourseId;
+    private String CourseName;
     private int courseCapacity;
-    private String subjectID;
-    private String semesterID;
-    private String professorID;
+    private String SubjectID;
+    private String SemesterID;
+    private String ProfessorID;
 
-    // Constructor để tải dữ liệu (dùng trong JTable/ComboBox)
-    public Course(String courseID, String courseName, int courseCapacity) {
-        this.courseID = courseID;
-        this.courseName = courseName;
-        this.courseCapacity = courseCapacity;
-    }
+    // ----- Constructors -----
+    public Course() { }
 
-    // Constructor để TẠO MỚI (dùng trong form Thêm mới)
-    public Course(String courseID, String courseName, int courseCapacity, String subjectID, String semesterID, String professorID) {
-        this.courseID = courseID;
-        this.courseName = courseName;
-        this.courseCapacity = courseCapacity;
-        this.subjectID = subjectID;
-        this.semesterID = semesterID;
-        this.professorID = professorID;
-    }
+    // ----- Getters and Setters -----
 
-    // Getters
-    public String getCourseID() { return courseID; }
-    public String getCourseName() { return courseName; }
-    public int getcourseCapacity() { return courseCapacity; }
-    public String getsubjectID() { return subjectID; }
-    public String getSemesterID() { return semesterID; }
-    public String getProfessorID() { return professorID; }
+    public String getCourseId() { return CourseId; }
+    public void setCourseId(String courseId) { this.CourseId = courseId; }
 
-    @Override
-    public String toString() {
-        // Đây là thứ sẽ hiển thị trong ComboBox (Giao diện Giảng viên)
-        return courseName + " (" + courseName + ")";
-    }
+    public String getCourseName() { return CourseName; }
+    public void setCourseName(String courseName) { this.CourseName = courseName; }
+
+    public int getCourseCapacity() { return courseCapacity; }
+    public void setCourseCapacity(int courseCapacity) { this.courseCapacity = courseCapacity; }
+
+    public String getSubjectID() { return SubjectID; }
+    public void setSubjectID(String subjectID) { this.SubjectID = subjectID; }
+
+    public String getSemesterID() { return SemesterID; }
+    public void setSemesterID(String semesterID) { this.SemesterID = semesterID; }
+
+    public String getProfessorID() { return ProfessorID; }
+    public void setProfessorID(String professorID) { this.ProfessorID = professorID; }
 }
