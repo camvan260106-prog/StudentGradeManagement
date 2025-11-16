@@ -3,6 +3,7 @@ package org.example.controller;
 import org.example.dao.AccountDAO;
 import org.example.model.Account;
 import org.example.view.LoginForm;
+import org.example.view.AdminForm;
 import org.example.view.StudentForm;
 import org.example.controller.LoginController;
 
@@ -43,10 +44,10 @@ public class LoginController implements ActionListener {
 
             } else if (roleNameFromView.equals("Professor")) {
                 // openProfessorView(username); // username là ProfessorID
-                view.showMessage("Đăng nhập Giảng viên thành công! (Chưa có giao diện)");
+                view.showMessage("Đăng nhập Giảng viên thành công!");
             } else if (roleNameFromView.equals("Admin")) {
-                // openAdminView();
-                view.showMessage("Đăng nhập Admin thành công! (Chưa có giao diện)");
+                openAdminView();
+                view.showMessage("Đăng nhập Admin thành công!");
             }
         } else {
             // ĐĂNG NHẬP THẤT BẠI
@@ -55,12 +56,20 @@ public class LoginController implements ActionListener {
     }
 
     /**
-     * Hàm riêng để mở StudentForm theo đúng mô hình MVC
+     * Hàm riêng để mở StudentForm theo mô hình MVC
      */
     private void openStudentView(String mssv) {
         StudentForm studentView = new StudentForm();
         StudentController studentController = new StudentController(studentView, mssv);
         studentController.loadInitialData();
         studentView.setVisible(true);
+    }
+    /**
+     * Hàm riêng để mở AdminForm theo đúng mô hình MVC
+     */
+    private void openAdminView() {
+        AdminForm adminView = new AdminForm();
+        new AdminController(adminView); // Controller tự gắn vào View
+        adminView.setVisible(true);
     }
 }

@@ -14,6 +14,7 @@ import org.example.model.StudentGradeView;
 
 // Import View
 import org.example.view.StudentForm;
+import org.example.view.StudentDetailForm;
 
 import javax.swing.JOptionPane;
 import java.text.DecimalFormat;
@@ -27,7 +28,7 @@ public class StudentController {
     private final GradeDAO gradeDAO;
     private final SemesterDAO semesterDAO;
     private final CourseDAO courseDAO; // Thêm CourseDAO
-
+    private Student student;
     private final String mssv; // Lưu trữ MSSV của sinh viên này
     private List<StudentGradeView> allGrades; // Cache để tính CPA
 
@@ -56,8 +57,8 @@ public class StudentController {
      */
     public void loadInitialData() {
         // 1. Tải thông tin SV
-        Student student = studentDAO.getStudentById(mssv);
-        view.setStudentInfo(student);
+        this.student = studentDAO.getStudentById(mssv);
+        view.setStudentInfo(this.student);
 
         // 2. Tải học kỳ vào JComboBox
         List<Semester> semesters = semesterDAO.getAllSemesters();
@@ -131,7 +132,20 @@ public class StudentController {
     // ----- CÁC HÀM XỬ LÝ SỰ KIỆN TỪ VIEW -----
 
     public void handleDetailButtonClick() {
-        JOptionPane.showMessageDialog(view, "Nút 'Chi tiết' đã được nhấn!");
+        // Kiểm tra xem đã tải được thông tin SV chưa
+        if (this.student != null) {
+            // 1. Tạo View mới
+            StudentDetailForm detailView = new StudentDetailForm();
+
+            // 2. Tạo Controller mới (truyền View và Model vào)
+            new StudentDetailController(detailView, this.student);
+
+            // 3. Hiển thị View
+            detailView.setVisible(true);
+
+        } else {
+            JOptionPane.showMessageDialog(view, "Chưa thể tải chi tiết (Lỗi dữ liệu sinh viên).");
+        }
     }
 
     public void handleLogoutClick() {
